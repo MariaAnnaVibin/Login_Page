@@ -5,3 +5,16 @@
     padding:20px;
     justify-content: space-evenly;
 }
+.home{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    padding:20px;
+}
+
+.loader-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:60vh;
+}
