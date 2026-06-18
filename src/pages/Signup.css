@@ -1,0 +1,99 @@
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 20px;
+}
+
+.signup-card {
+  width: 420px;
+  background: white;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.signup-card h2 {
+  text-align: center;
+  color: #7c3aed;
+  margin-bottom: 10px;
+}
+
+.signup-card p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.input-group label {
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.input-group input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+}
+
+.input-group input:focus {
+  border-color: #7c3aed;
+}
+
+.signup-button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ec4899;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.signup-button:hover {
+  background-color: #db2777;
+}
+
+.login-text {
+  margin-top: 15px;
+}
+
+.login-link {
+  text-decoration: none;
+  color: #7c3aed;
+  font-weight: 600;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.success {
+  color: green;
+  text-align: center;
+  margin-top: 15px;
+}
+
+@media (max-width: 500px) {
+  .signup-card {
+    width: 100%;
+  }
+}
