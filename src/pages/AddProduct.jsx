@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Product.css'
+import axios from "axios";
 
 function AddProduct() {
 
@@ -34,29 +35,27 @@ function AddProduct() {
         formData.append("description", product.description);
         formData.append("category", product.category);
         formData.append("stock", product.stock);
-        formData.append("image", image);
+        if (image) formData.append("image", image)
 
-        console.log("Product Data:", product);
-        console.log("Image:", image);
 
-        // Example API call
-        /*
+
+
         try {
-          const response = await axios.post(
-            "YOUR_API_ENDPOINT",
-            formData,
-            {
-              headers: {
-                "Content-Type": "multipart/form-data"
-              }
-            }
-          );
-    
-          console.log(response.data);
+            const response = await axios.post("https://sample-e-1.onrender.com/product/addproduct",
+                formData,
+                {
+                    headers: {
+                        "Content-Type": "multipart/form-data"
+                    }
+                }
+            );
+
+            console.log("Success:", response.data);
+            alert("Product Added Successfully!");
         } catch (err) {
-          console.log(err);
+            console.log("Error:", err.response?.data || err.message);
         }
-        */
+
     };
 
     return (

@@ -1,9 +1,11 @@
 import "./Card.css";
+import { motion } from "motion/react"
 
-function Card({ name, price, description,image }) {
+
+function Card({ name, price, description, image }) {
     return (
-        <div className="card">
-            <img src={"https://sample-e-1.onrender.com/"+image} alt="" />
+        <motion.div className="card" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <img src={"https://sample-e-1.onrender.com/" + image} alt="" />
             <h2>{name}</h2>
             <h3>₹{price}</h3>
             <p>{description}</p>
@@ -12,7 +14,7 @@ function Card({ name, price, description,image }) {
             <button className="buy-btn">
                 View Product
             </button>
-        </div>
+        </motion.div>
     );
 }
 
