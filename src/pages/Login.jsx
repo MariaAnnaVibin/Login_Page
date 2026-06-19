@@ -4,6 +4,18 @@ import {useState} from 'react'
 import axios from 'axios'
 import Signup from "./Signup";
 import { useNavigate } from "react-router-dom";
+import * as z from "zod"
+
+const loginScheme=z.object({
+    email:z.string()
+    .min(1,"Email is required")
+    .email("Please enter valid email"),
+
+    password:z.string()
+    .min(1,"Password is required")
+})
+    
+
 
 function Login() {
     const[email,setmail]=useState('')
@@ -17,6 +29,14 @@ function Login() {
         console.log("Login button clicked");
         seterror('')
         setsuccess('');
+
+        const result=loginScheme.safeParse({
+            email,password
+        })
+        if (!result.success){
+            seterror(result.error.issues[0].message)
+            return
+        }
 
         try{
     

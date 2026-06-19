@@ -2,7 +2,8 @@ import Card from "../Components/Card";
 import "./Home.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { SyncLoader } from "react-spinners";
+import { TailSpin } from "react-loader-spinner";
+
 
 function Home() {
   const [products, setProducts] = useState([]);
@@ -22,12 +23,17 @@ function Home() {
   }, []);
 
   if (loading) {
-    return (
-      <div className="loader-container">
-        <SyncLoader color="#7C3AED" size={15} />
-      </div>
-    );
-  }
+  return (
+    <div className="loader-container">
+      <TailSpin
+        height="80"
+        width="80"
+        color="#7C3AED"
+        ariaLabel="loading"
+      />
+    </div>
+  );
+}
 
   return (
     <div className="home">
