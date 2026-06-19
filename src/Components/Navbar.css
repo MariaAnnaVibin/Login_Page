@@ -57,14 +57,14 @@
 }
 
 .signup-btn {
-  background: white;
+  background: transparent;
   color: #4361ee;
-  border: none;
+  border: 3px solid white;
 }
 
 .signup-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.4);
+  background: #e23887;
 }
 
 @media (max-width: 768px) {
@@ -81,4 +81,23 @@
     padding: 8px 16px;
     font-size: 14px;
   }
+}
+.surprise-btn {
+  background-color: transparent;
+  border: 3px solid white;
+  padding: 10px 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.surprise-btn:hover {
+  background-color: #ff0798;
+  transform: scale(1.05);
+}
+
+.surprise-btn a {
+  text-decoration: none;
+  color: #333;
 }

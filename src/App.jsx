@@ -5,7 +5,8 @@ import Signup from "./pages/Signup";
 import Home from "./pages/Home";
 import { Routes, Route } from "react-router-dom";
 import AddProduct from "./pages/AddProduct";
-// import './App.css'
+import './App.css'
+import End from "./pages/End";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/home" element={<Home />} />
           <Route path="/addproduct" element={<AddProduct />} />
+          <Route path="/end" element={<End />} />
 
         </Routes>
       </main>
@@ -29,4 +31,4 @@ function App() {
   );
 }
 
-  export default App;
+export default App;

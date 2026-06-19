@@ -1,0 +1,26 @@
+.end-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    gap: 20px;
+}
+
+.end-container h1 {
+    color: #7C3AED;
+}
+
+.end-container button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    background: #EC4899;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.end-container button:hover {
+    background: #DB2777;
+}
